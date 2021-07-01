@@ -8,7 +8,7 @@ import { Responsive } from './utils/Responsive';
 function App() {
   useEffect(() => {
     // update html with class reflecting current size of the screen
-    Responsive.Instantiate().addResponsiveSizeListeners();
+    Responsive.addResponsiveSizeListeners();
   }, [])
 
   return (
