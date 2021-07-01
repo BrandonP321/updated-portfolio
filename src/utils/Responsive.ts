@@ -82,7 +82,6 @@ class ResponsiveInternal {
             const htmlEleHasSizeClass = htmlEle.classList.contains(size)
 
             if (doesQueryMatch && !htmlEleHasSizeClass) {
-                console.log("adding class")
                 htmlEle.classList.add(size)
             } else if (!doesQueryMatch && htmlEleHasSizeClass) {
                 htmlEle.classList.remove(size);
