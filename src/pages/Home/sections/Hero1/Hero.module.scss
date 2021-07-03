@@ -1,0 +1,33 @@
+@import "../../../../shared/styles/base_ui.scss";
+
+@function imgFolderPath($img-name-or-path) {
+    @return "../../../../assets/media/img/#{$img-name-or-path}";
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    height: 100vh;
+    padding: 0 0 20vh 0;
+
+    background-image: linear-gradient(to top, black, transparent, transparent), url(imgFolderPath("hero-large.png"));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    text-align: center;
+
+    .heroContent {
+
+        .title {
+            font-size: 5.25rem;
+        }
+
+        .subtitle {
+            color: $text-color-gray;
+            font-size: 3rem;
+        }
+    }
+}

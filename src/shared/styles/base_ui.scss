@@ -1,2 +1,11 @@
 @import "colors";
 @import "responsiveSize";
+
+@import url("https://use.typekit.net/wnn7dwh.css");
+
+$primary-font: neue-haas-grotesk-display;
+
+* {
+    font-family: $primary-font;
+    color: $base-color-whitesmoke;
+}
