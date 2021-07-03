@@ -18,7 +18,8 @@ header.mainHeader {
     .headerLinks {
 
         .navLink {
-            margin-right: 2rem;
+            margin-right: .5rem;
+            padding: 0 1rem;
 
             &:last-child {
                 margin-right: 0;
@@ -32,7 +33,7 @@ header.mainHeader {
 
         width: 0;
 
-        background-color: red;
+        background-color: $color-accent-main;
         height: 5px;
 
         transform: translateX(-50%);

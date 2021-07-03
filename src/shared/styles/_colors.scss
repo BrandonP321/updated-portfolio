@@ -7,9 +7,12 @@ $base-color-red-alert: rgb(234, 10, 42);
 $base-color-whitesmoke: rgb(245, 245, 245);
 $base-color-white: rgb(255, 255, 255);
 $base-color-shadow-gray: rgb(49, 49, 49);
+$base-color-neon-blue: #18e0fe;
 
 // TEXT
 $text-color-gray: $base-color-shadow-gray;
 
 // SITE COLORS
 // $color-bg-primary-
+$color-accent-main: $base-color-neon-blue;
+$color-dark-shadow: $base-color-shadow-gray;

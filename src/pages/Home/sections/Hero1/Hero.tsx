@@ -11,7 +11,7 @@ export default function Hero({}: Props): ReactElement {
     const [parallaxAmount, setParallaxAmount] = useState(0);
 
     useEffect(() => {
-        const parallaxSpeed = .25;
+        const parallaxSpeed = .4;
 
         // make initial parallax call on page load
         parallax(parallaxSpeed);
@@ -32,8 +32,8 @@ export default function Hero({}: Props): ReactElement {
     return (
         <div className={styles.hero} style={heroStyle}>
             <div className={styles.heroContent}>
-                <h1 className={styles.title}>BRANDON PHILLIPS</h1>
                 <p className={styles.subtitle}>FULL STACK WEB DEVELOPER</p>
+                <h1 className={styles.title}>BRANDON PHILLIPS</h1>
             </div>
         </div>
     )
