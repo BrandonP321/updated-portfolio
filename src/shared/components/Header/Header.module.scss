@@ -1,0 +1,46 @@
+@import "../../../shared/styles/base_ui.scss";
+
+header.mainHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 1.5rem;
+
+    .headerBrand {
+
+    }
+
+    .headerLinks {
+
+        .navLink {
+            margin-right: 2rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .linkHoverEffect {
+        position: absolute;
+        bottom: 0;
+
+        width: 0;
+
+        background-color: red;
+        height: 5px;
+
+        transform: translateX(-50%);
+
+        transition: width .25s, opacity .5s;
+
+        &.active {
+            transition: width .25s, opacity .5s, left .25s;
+        }
+    }
+}
