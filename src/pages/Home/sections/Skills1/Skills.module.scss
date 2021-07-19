@@ -97,6 +97,8 @@
 
 .skillPopUp {
     position: absolute;
+    // hide off screen until JS positions popup at mouse location
+    left: 1000%;
     pointer-events: none;
     padding-left: 2rem;
 
@@ -112,11 +114,12 @@
     .content {
         background: $gradient-3d-shadow-primary;
         height: 100%;
+        width: 0;
         padding: 1rem;
         border-radius: 1rem;
-        animation: revealPopup .75s;
         overflow: hidden;
         box-shadow: 0 0 2rem rgba(0, 0, 0, .5);
+        animation: revealPopup .75s 0s forwards;
         
         h3 {
             white-space: nowrap;
