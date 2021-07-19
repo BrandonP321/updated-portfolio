@@ -1,7 +1,8 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useRef } from 'react'
 import { useState } from 'react';
 import styles from "./Header.module.scss";
 import classNames from 'classnames';
+import { useEffect } from 'react';
 
 const navLinks = [
     { text: "Home", id: "#" },
@@ -19,6 +20,30 @@ export default function Header({}: Props): ReactElement {
     const [linkHoverEleStyle, setLinkHoverEleStyle] = useState<React.CSSProperties>({ width: 0, left: 0, opacity: 0 })
     const [isLinkHoverEleVisible, setIsLinkHoverEleVisible] = useState(false);
     const [hoveredLink, setHoveredLink] = useState<null | EventTarget>(null);
+    const [showHeaderBg, setShowHeaderBg] = useState(false);
+
+    const scrollAmountToShowHeaderBg = useRef(300);
+
+    useEffect(() => {
+        // make initial check for showing header bg
+        handleScroll();
+
+        window.addEventListener("scroll", handleScroll)
+    }, [])
+
+    /**
+     * removed any event listeners on component unmount
+     */
+    const cleanup = () => {
+
+    }
+
+    /**
+     * checks if header bg needs to be shown on scroll
+     */
+    const handleScroll = () => {
+        setShowHeaderBg(window.pageYOffset >= scrollAmountToShowHeaderBg.current);
+    }
 
     const handleLinkHover = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         const target = e.currentTarget;
@@ -41,6 +66,7 @@ export default function Header({}: Props): ReactElement {
 
     return (
         <header className={styles.mainHeader} onMouseOver={() => setIsHeaderHovered(true)} onMouseLeave={handleHeaderLeaveHover}>
+            <div className={classNames(styles.headerBg, {[styles.shown]: showHeaderBg})}/>
             <div className={styles.headerBrand}>
                 BRANDON
             </div>

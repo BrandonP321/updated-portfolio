@@ -16,6 +16,10 @@ $base-color-neon-blue: #18e0fe;
 $text-color-gray: $base-color-shadow;
 $text-color-primary: $base-color-whitesmoke;
 
+// GRADIENTS
+$gradient-3d-shadow-primary: linear-gradient(to bottom right, #34393f, #17181b);
+$gradient-3d-shadow-secondary: linear-gradient(to bottom right, #292b30, #727478);
+
 // SITE COLORS
 // $body-bg: #1e252b;
 $body-bg: #060e14;

@@ -13,6 +13,10 @@ $primary-font: neue-haas-grotesk-display;
     font-weight: 700;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 // SCROLLBAR
 body::-webkit-scrollbar {
     width: 1rem;
