@@ -1,0 +1,45 @@
+@import "../../../../shared/styles/base_ui.scss";
+
+.sectionHeading {
+    text-align: center;
+    position: relative;
+
+    .bgText {
+        font-size: 12rem;
+        opacity: .1;
+
+        @include screenLarge {
+            font-size: 9rem;
+        }
+        
+        @include screenMedium {
+                font-size: 17vw;
+        }
+    }
+
+    .textWrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        text-align: center;
+        align-items: center;
+
+        h2 {
+            text-align: center;
+            width: 100%;
+            font-size: 5rem;
+            color: $color-accent-main;
+
+            @include screenLarge {
+                font-size: 3.5rem;
+            }
+
+            @include screenMedium {
+                font-size: 8vw;
+            }
+        }
+    }
+}
