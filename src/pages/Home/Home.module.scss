@@ -1,9 +1,6 @@
 @import "../../shared/styles/base_ui.scss";
 
 .home {
-
-    .testBody {
-        height: 200vh;
-        background-color: black;
-    }
+    background-color: $body-bg;
+    padding-bottom: 50rem;
 }

@@ -1,0 +1,52 @@
+[
+    {
+        "popUpSideOfMouseToDisplayOn": "right",
+        "heading": "Front End Technologies",
+        "skills": [
+            "HTML & SCSS",
+            "Javascript and jQuery",
+            "Typescript",
+            "React.js",
+            "Razor"
+        ]
+    },
+    {
+        "popUpSideOfMouseToDisplayOn": "right",
+        "heading": "Back End Technologies",
+        "skills": [
+            "Node.js",
+            "Express.js",
+            "MySQL & NoSQL",
+            "MongoDB & Sequelize",
+            "Socket.io"
+        ]
+    },
+    {
+        "popUpSideOfMouseToDisplayOn": "right",
+        "heading": "Design Tools",
+        "skills": [
+            "Adobe Photoshop",
+            "Adobe Illustrator",
+            "Adobe XD"
+        ]
+    },
+    {
+        "popUpSideOfMouseToDisplayOn": "left",
+        "heading": "Soft Skills",
+        "skills": [
+            "Communication",
+            "Team Work",
+            "Problem Solving",
+            "Adaptibility",
+            "Leadership"
+        ]
+    },
+    {
+        "popUpSideOfMouseToDisplayOn": "left",
+        "heading": "Other Skills & Tools",
+        "skills": [
+            "Github & Perforce VCS",
+            "Agile Workflow Experience"
+        ]
+    }
+]

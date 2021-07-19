@@ -6,13 +6,19 @@ $base-color-shadow-blue: rgb(104, 161, 185);
 $base-color-red-alert: rgb(234, 10, 42);
 $base-color-whitesmoke: rgb(245, 245, 245);
 $base-color-white: rgb(255, 255, 255);
-$base-color-shadow-gray: rgb(49, 49, 49);
+// $base-color-shadow: #0d0d0f;
+// $base-color-shadow: #2c353d;
+// $base-color-shadow: #16181b;
+$base-color-shadow: #2f343a;
 $base-color-neon-blue: #18e0fe;
 
 // TEXT
-$text-color-gray: $base-color-shadow-gray;
+$text-color-gray: $base-color-shadow;
+$text-color-primary: $base-color-whitesmoke;
 
 // SITE COLORS
-// $color-bg-primary-
+// $body-bg: #1e252b;
+$body-bg: #060e14;
+// $body-bg: #0c0c0f;
 $color-accent-main: $base-color-neon-blue;
-$color-dark-shadow: $base-color-shadow-gray;
+$color-dark-shadow: $base-color-shadow;

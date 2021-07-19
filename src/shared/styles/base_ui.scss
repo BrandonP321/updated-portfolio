@@ -3,11 +3,14 @@
 
 @import url("https://use.typekit.net/wnn7dwh.css");
 
+$section-width: 90%;
+$section-max-width: 1500px;
 $primary-font: neue-haas-grotesk-display;
 
 * {
     font-family: $primary-font;
     color: $base-color-whitesmoke;
+    font-weight: 700;
 }
 
 // SCROLLBAR

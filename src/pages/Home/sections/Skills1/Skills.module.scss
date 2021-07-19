@@ -1,0 +1,175 @@
+@import "../../../../shared/styles/base_ui.scss";
+
+@function imgPath($img) {
+    @return "../../../../assets/media/img/#{$img}";
+}
+
+.skillsSection {
+
+}
+
+.skillsContainer {
+    position: relative;
+    // background-image: url(imgPath("skills_bulb_4k.jpg"));
+    background-image: url(imgPath("skills_bulb.png"));
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    // padding-top: 50%;
+    padding-top: 73%;
+
+    @include screenMassive {
+        background-image: url(imgPath("skills_bulb_4k.jpg"));
+    }
+}
+
+.skillContainer {
+    position: relative;
+    width: 5%;
+    border-radius: 50%;
+    cursor: pointer;
+    // border: 2px solid $color-accent-main;
+    overflow: hidden;
+
+    .aspectRatioBox {
+        width: 100%;
+        padding-top: 100%;
+    }
+
+    .iconWrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 16%;
+    }
+}
+
+.icon {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.skillOne {
+    position: absolute;
+    top: 46.7%;
+    left: 35.6%;
+}
+
+.skillTwo {
+    position: absolute;
+    top: 35.1%;
+    left: 39%;
+}
+
+.skillThree {
+    position: absolute;
+    top: 30.3%;
+    left: 47.4%;
+}
+
+.skillFour {
+    position: absolute;
+    top: 35.1%;
+    left: 55.8%;
+}
+
+.skillFive {
+    position: absolute;
+    top: 46.7%;
+    left: 59.4%;
+}
+
+.shine {
+    position: absolute;
+    top: -100%;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.575), transparent);
+    transform: rotate(45deg);
+    animation: shine 2s linear 1s infinite;
+}
+
+.skillPopUp {
+    position: absolute;
+    pointer-events: none;
+    padding-left: 2rem;
+
+    &.testing {
+        position: static;
+    }
+
+    &.leftFacing {
+        padding: 0 2rem 0 0;
+        transform: translateX(-100%);
+    }
+
+    .content {
+        background: linear-gradient(to bottom right, #34393f, #17181b);
+        height: 100%;
+        padding: 1rem;
+        border-radius: 1rem;
+        animation: revealPopup .75s;
+        overflow: hidden;
+        box-shadow: 0 0 2rem rgba(0, 0, 0, .5);
+        
+        h3 {
+            white-space: nowrap;
+            font-size: 3rem;
+            color: $color-accent-main;
+        }
+
+        .skillsList {
+            height: 0;
+            margin-top: 1rem;
+            overflow: hidden;
+            animation: revealSkills .5s .75s forwards;
+
+            p {
+                font-size: 1.2rem;
+                margin-bottom: .5rem;
+
+                .checkIcon {
+                    border-radius: 50%;
+                    padding: .2rem;
+                    background: linear-gradient(to bottom right, #292b30, #727478);
+                    margin-right: .5rem;
+                }
+            }
+        }
+    }
+}
+
+@keyframes shine {
+    from {
+        top: -100%;
+        left: 100%;
+    }
+    to {
+        top: 100%;
+        left: -100%;
+    }
+}
+
+@keyframes revealPopup {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes revealSkills {
+    from {
+        height: 5;
+    }
+    to {
+        height: 10rem;
+    }
+}
