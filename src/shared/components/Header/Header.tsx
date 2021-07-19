@@ -22,6 +22,7 @@ export default function Header({}: Props): ReactElement {
     const [hoveredLink, setHoveredLink] = useState<null | EventTarget>(null);
     const [showHeaderBg, setShowHeaderBg] = useState(false);
 
+    // how far user needs to scroll to show header bg
     const scrollAmountToShowHeaderBg = useRef(300);
 
     useEffect(() => {
@@ -29,13 +30,15 @@ export default function Header({}: Props): ReactElement {
         handleScroll();
 
         window.addEventListener("scroll", handleScroll)
+
+        return cleanup;
     }, [])
 
     /**
      * removed any event listeners on component unmount
      */
     const cleanup = () => {
-
+        window.removeEventListener("scroll", handleScroll);
     }
 
     /**
