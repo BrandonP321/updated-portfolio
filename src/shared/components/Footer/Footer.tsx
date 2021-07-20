@@ -1,7 +1,11 @@
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { ChangeEventHandler, FormEventHandler, ReactElement } from 'react'
 import { useState } from 'react';
 import GradientButton from '../GradientButton/GradientButton';
 import styles from "./Footer.module.scss";
+import classNames from 'classnames';
+// import {} from "";
 
 interface IFooterLink {
     linkName: string;
@@ -14,10 +18,6 @@ const projectsLinks: IFooterLink[] = [
     { linkName: "Destiny 2: Season 14", url: "https://bungie.net/SeasonOfTheSplicer" },
     { linkName: "Destiny 2: Season 14", url: "https://bungie.net/SeasonOfTheSplicer" },
     { linkName: "Destiny 2: Season 14", url: "https://bungie.net/SeasonOfTheSplicer" },
-    // { linkName: "", url: "" },
-    // { linkName: "", url: "" },
-    // { linkName: "", url: "" },
-    // { linkName: "", url: "" },
 ]
 
 const siteLinks: IFooterLink[] = [
@@ -26,6 +26,11 @@ const siteLinks: IFooterLink[] = [
     { linkName: "Projects", url: "#projects" },
     { linkName: "Resume", url: "#" },
 ]
+
+const socialLinks = {
+    git: <i className={classNames("fab fa-github-square", styles.socialIcon)}></i>,
+    linkedin: <i className={classNames("fab fa-linkedin", styles.socialIcon)}></i>,
+}
 
 interface Props {
     
@@ -68,6 +73,11 @@ export default function Footer({}: Props): ReactElement {
                 </div>
             </div>
             <div className={styles.bottomRow}>
+                <p className={styles.copyright}>© Brandon 2021</p>
+                <div className={styles.socialIcons}>
+                    <SocialIcon url="https://github.com/BrandonP321" icon={socialLinks.git} name={"Github"}/>
+                    <SocialIcon url="https://www.linkedin.com/in/brandon-phillips-dev" icon={socialLinks.linkedin} name={"LinkedIn"}/>
+                </div>
             </div>
         </footer>
     )
@@ -91,5 +101,19 @@ const FooterLinksList: React.FC<IFooterLinksList> = (props) => {
                 )
             })}
         </div>
+    )
+}
+
+interface ISocialIcon {
+    url: string;
+    icon: React.ReactNode;
+    name: string;
+}
+
+const SocialIcon: React.FC<ISocialIcon> = (props) => {
+    return (
+        <a href={props.url} target={"_blank"} className={styles.socialIcon}>
+            {props.icon}
+        </a>
     )
 }
