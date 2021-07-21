@@ -32,8 +32,8 @@ export default function Hero({}: Props): ReactElement {
     return (
         <div className={styles.hero} style={heroStyle}>
             <div className={styles.heroContent}>
-                <p className={styles.subtitle}>FULL STACK WEB DEVELOPER</p>
-                <h1 className={styles.title}>BRANDON PHILLIPS</h1>
+                {/* <p className={styles.subtitle}>FULL STACK WEB DEVELOPER</p>
+                <h1 className={styles.title}>BRANDON PHILLIPS</h1> */}
             </div>
         </div>
     )

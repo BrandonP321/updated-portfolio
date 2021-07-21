@@ -1,0 +1,56 @@
+@import "../../../../shared/styles/base_ui.scss";
+
+.skillsListWrapper {
+    // max-width: 30rem;
+    // width: 90%;
+    flex-grow: 1;
+    padding: 2rem 1rem 1rem 1rem;
+    border-radius: 1rem;
+    // background-color: $color-dark-shadow;
+    // box-shadow: 0 0 1rem rgba(0, 0, 0, .3);
+    
+    // make middle of 3 skill lists stand out
+    &:nth-child(2) {
+        transform: translateY(-2rem);
+        background-color: $color-dark-shadow;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, .66);
+        padding-top: 4rem;
+    }
+
+    .skillsHeading {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .skillsIcon {
+        display: block;
+        width: 60%;
+        object-fit: contain;
+        margin: 2rem auto 0 auto;
+    }
+
+    .skillsList {
+
+        .skillsSubList {
+
+            h4 {
+                color: rgba($text-color-primary, .4);
+                font-size: 2rem;
+                margin-bottom: .5rem;
+            }
+
+            .skill {
+                font-size: 1.2rem;
+                margin-bottom: .25rem;
+            }
+        }
+    }
+
+    .divider {
+        width: 100%;
+        height: 1px;
+        background-color: rgba($base-color-white, .3);
+        border: none;
+        margin: 2rem 0;
+    }
+}

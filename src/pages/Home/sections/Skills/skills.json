@@ -1,0 +1,26 @@
+{
+    "dev": [
+        {
+            "listHeading": "Front End",
+            "skills": [
+                "HTML",
+                "CSS",
+                "javascript"
+            ]
+        },
+        {
+            "listHeading": "Back End",
+            "skills": [
+                "Node.js",
+                "socket.io",
+                "Mongoose"
+            ]
+        }
+    ],
+    "": [
+
+    ],
+    "soft": [
+
+    ]
+}

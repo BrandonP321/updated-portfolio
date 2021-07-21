@@ -12,13 +12,13 @@
     height: 100vh;
     padding: 0 0 0 5rem;
 
-    background-image: linear-gradient(to top, black, transparent, transparent), url(imgFolderPath("code-icon-hero-final.jpg"));
+    background-image: linear-gradient(to top, $body-bg, transparent, transparent), url(imgFolderPath("code-icon-hero-final.jpg"));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
     @include screenMassive {
-        background-image: linear-gradient(to top, black, transparent, transparent), url(imgFolderPath("code-icon-hero-4k.jpg"));
+        background-image: linear-gradient(to top, $body-bg, transparent, transparent), url(imgFolderPath("code-icon-hero-4k.jpg"));
     }
 
     .heroContent {
